@@ -1,0 +1,11 @@
+meta {
+  name: Get agent behavior
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/agent/{{agent_uuid}}/behavior
+  body: none
+  auth: none
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Update agent voice
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{base_url}}/agent/75d59cc5-ab62-4a7b-802b-02a08827e39a/voice
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "voice_uuid": "7240b0a3-6698-42f4-a0d5-ea6d8c5cbc74",
+      "settings": {
+          "speed": 0.151123,
+          "temperature": 0.151223,
+          "volume": 0.151223
+      }
+  }
+}

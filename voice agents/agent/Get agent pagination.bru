@@ -1,0 +1,16 @@
+meta {
+  name: Get agent pagination
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/agent?page=1&size=10
+  body: json
+  auth: none
+}
+
+params:query {
+  page: 1
+  size: 10
+}

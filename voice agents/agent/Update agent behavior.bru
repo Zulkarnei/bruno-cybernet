@@ -1,0 +1,18 @@
+meta {
+  name: Update agent behavior
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{base_url}}/agent/75d59cc5-ab62-4a7b-802b-02a08827e39a/behavior
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "behavior": "begin_prompt", /*"begin_promt, begin_dynamic, silent"*/
+    "prompt": "Hello! I'm a helpful assistant. can I ask you about your mood?"
+  }
+}

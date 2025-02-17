@@ -1,0 +1,21 @@
+meta {
+  name: Update agent vad by uuid
+  type: http
+  seq: 23
+}
+
+put {
+  url: {{base_url}}/agent/68d0e18c-3e2e-4287-9755-e924a9a7090a/vad/af23aac1-45a2-475d-8a8b-4bb4a8fc6cf6
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "settings": {
+      "threshold_on": 0.7,
+      "threshold_off": 0.2,
+      "max_silence_after_speech": 30
+    }
+  }
+}

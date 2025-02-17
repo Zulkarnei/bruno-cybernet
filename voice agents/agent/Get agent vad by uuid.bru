@@ -1,0 +1,22 @@
+meta {
+  name: Get agent vad by uuid
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{base_url}}/agent/68d0e18c-3e2e-4287-9755-e924a9a7090a/vad
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "$%!@#^&*()+..a,/",
+      "description": "-$%!@#^&*()-,..,",
+      "type_uuid": " 2bfc0c94-cfa8-4c8d-98ac-2f5b723ac064",
+      "format": [
+          "{\"summary\": \"This is a detailed summary of the call.\"}"
+      ]
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Put Voice Provider by uuid
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/voice-provider/f553ddbf-25c0-4a82-a904-f7e07a8cd3ed
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "string",
+    "icon": "string",
+    "url": "string"
+  }
+}

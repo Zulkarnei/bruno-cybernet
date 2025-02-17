@@ -1,0 +1,18 @@
+meta {
+  name: PUT llm model by uuid Copy
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/llm/{{last_llm_model_uuid}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "string",
+    "icon": "string"
+  }
+}

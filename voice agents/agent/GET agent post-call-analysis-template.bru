@@ -1,0 +1,24 @@
+meta {
+  name: GET agent post-call-analysis-template
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{base_url}}/agent/cffb51e2-c650-4d99-9c23-86861fd4270e/post-call-analysis-template?page=1&size=10
+  body: json
+  auth: none
+}
+
+params:query {
+  page: 1
+  size: 10
+}
+
+body:json {
+  {
+    "name": "$%!@#^&*()+..a,/",
+    "description": "-$%!@#^&*()-,..,",
+    "type_uuid": "8636cfda-bb2b-466f-a16c-3b8fcdaf2a64"
+  }
+}

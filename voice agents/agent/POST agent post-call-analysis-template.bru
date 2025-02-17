@@ -1,0 +1,19 @@
+meta {
+  name: POST agent post-call-analysis-template
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{base_url}}/agent/c7fdb081-f425-4cb4-9af2-7c5f91a9f7eb/post-call-analysis-template
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "$%!@#^&*()+..a,/",
+    "description": "-$%!@#^&*()-,..,",
+    "type_uuid": "8636cfda-bb2b-466f-a16c-3b8fcdaf2a64"
+  }
+}

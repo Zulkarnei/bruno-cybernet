@@ -1,0 +1,25 @@
+meta {
+  name: Get Voice Types
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/voice-type
+  body: none
+  auth: none
+}
+
+tests {
+  let response = res.getBody();
+  
+  if (response && Array.isArray(response)) {
+      response.forEach(item => {
+          if (item.name) {
+              let envVarName = item.name.toLowerCase() + "_voice";  // male_voice or female_voice
+              bru.setEnvVar(envVarName, item.uuid);
+          }
+      });
+  }
+  
+}

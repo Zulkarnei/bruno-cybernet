@@ -1,0 +1,16 @@
+meta {
+  name: Get voice pagination
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/voice?page=1&size=10
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 1
+  size: 10
+}

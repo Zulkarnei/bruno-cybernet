@@ -1,0 +1,18 @@
+meta {
+  name: PUT llm model by uuid
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/llm/a4fd1737-a031-44d8-bab2-bdc417d4df79
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "{{$randomFullName}}",
+      "description": "{{$randomAlphaNumeric}}"
+  }
+}

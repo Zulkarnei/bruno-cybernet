@@ -1,0 +1,27 @@
+meta {
+  name: Create llm-provider
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/llm-provider
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "string",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA..."
+  }
+}
+
+tests {
+  const response = res.getBody();
+  
+  if (response.uuid) {
+      bru.setEnvVar("last_llm_model_uuid", response.uuid);
+  }
+  
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Delete language by uuid
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/language/{{last_language_va_uuid}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "cd",
+    "code": "cd"
+  }
+}

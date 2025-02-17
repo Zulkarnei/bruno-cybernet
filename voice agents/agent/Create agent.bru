@@ -1,0 +1,17 @@
+meta {
+  name: Create agent
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/agent
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "{{$randomUserName}}"
+  }
+}

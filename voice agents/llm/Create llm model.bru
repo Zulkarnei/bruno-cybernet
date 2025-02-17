@@ -1,0 +1,28 @@
+meta {
+  name: Create llm model
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/llm
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "zxcv",
+      "description": "des",
+      "provider_uuid": "2cd437e0-65e0-4218-9274-fd8af840a750"
+  }
+}
+
+tests {
+  const response = res.getBody();
+  
+  if (response.uuid) {
+      bru.setEnvVar("last_llm_model_uuid", response.uuid);
+  }
+  
+}

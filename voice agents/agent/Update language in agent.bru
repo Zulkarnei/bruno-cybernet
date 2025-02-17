@@ -1,0 +1,17 @@
+meta {
+  name: Update language in agent
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{base_url}}/agent/75d59cc5-ab62-4a7b-802b-02a08827e39a/language
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "language_uuid": "ec73b83f-2b0d-4dc7-b16a-a4681f74bd44"
+  }
+}

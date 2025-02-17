@@ -1,0 +1,19 @@
+meta {
+  name: DELETE llm model by uuid
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/llm/{{last_llm_model_uuid}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "{{$randomFullName}}",
+      "description": "{{$randomAlphaNumeric}}",
+      "uuid": "{{last_llm_model_uuid}}"
+  }
+}

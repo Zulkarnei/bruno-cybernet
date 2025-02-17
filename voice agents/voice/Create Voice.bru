@@ -1,0 +1,19 @@
+meta {
+  name: Create Voice
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/voice
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "string",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...",
+    "url": "string"
+  }
+}

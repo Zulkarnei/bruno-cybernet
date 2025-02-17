@@ -1,0 +1,21 @@
+meta {
+  name: Update agent tool by uuid
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{base_url}}/agent/75d59cc5-ab62-4a7b-802b-02a08827e39a/tool/7e343f27-71d5-4cc0-8013-aeb0e0640462
+  body: json
+  auth: none
+}
+
+body:json {
+  {  
+    "type": "function",
+    "function": {
+        "name": "close_toto_end_call",  
+        "description": "End call with recipient"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Post agent tool
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{base_url}}/agent/e0e81e7b-3328-4b96-a9cd-a511ad94c606/tool
+  body: json
+  auth: none
+}
+
+body:json {
+  {  
+    "type": "function",
+    "function": {
+        "name": "close_to_end_call",  
+        "description": "ask something weird"
+    },
+    "is_default": true
+  }
+}

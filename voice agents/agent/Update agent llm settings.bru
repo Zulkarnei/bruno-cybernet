@@ -1,0 +1,20 @@
+meta {
+  name: Update agent llm settings
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/agent/75d59cc5-ab62-4a7b-802b-02a08827e39a/llm
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "llm_uuid": "a4fd1737-a031-44d8-bab2-bdc417d4df79",
+      "settings": {
+          "temperature": 0.1545
+      }
+  }
+}

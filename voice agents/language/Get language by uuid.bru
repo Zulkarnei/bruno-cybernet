@@ -1,0 +1,23 @@
+meta {
+  name: Get language by uuid
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/language?page=1&size=10
+  body: json
+  auth: none
+}
+
+params:query {
+  page: 1
+  size: 10
+}
+
+body:json {
+  {
+    "name": "cd",
+    "code": "cd"
+  }
+}

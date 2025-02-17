@@ -1,0 +1,22 @@
+meta {
+  name: Update agent post-call-analysis-template by uuid
+  type: http
+  seq: 22
+}
+
+put {
+  url: {{base_url}}/agent/68d0e18c-3e2e-4287-9755-e924a9a7090a/post-call-analysis-template/04fcbcc0-6a50-49b2-b7cf-cb7b68cc5446
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "$%!@#^&*()+..a,/",
+      "description": "-$%!@#^&*()-,..,",
+      "type_uuid": " 2bfc0c94-cfa8-4c8d-98ac-2f5b723ac064",
+      "format": [
+          "{\"summary\": \"This is a detailed summary of the call.\"}"
+      ]
+  }
+}
